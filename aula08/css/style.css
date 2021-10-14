@@ -1,6 +1,8 @@
 #conteudo{
     width: 400px;
-    height: 300px;
+    min-height: 300px;
+    height: auto;
+    overflow: hidden;
     margin-left: auto;
     margin-right: auto;
     border: solid 1px #000000;
@@ -35,7 +37,9 @@ input{
 
 #resultadoPar, #resultadoImpar{
     width: 150px;
-    height: 110px;
+    min-height: 300px;
+    height: auto;
+    overflow: hidden;
     background-color: cornflowerblue;
     box-sizing: border-box;
     padding-top: 2px;

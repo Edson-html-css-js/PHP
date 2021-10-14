@@ -2,6 +2,27 @@
 //Inport do arquivo de funcoes do projeto
 require_once('modulo/functions.php');
 
+//declarando variaveis 
+$valorinicial = (int) 0;
+$valorFinal = (int) 0;
+$pares = (string) null;
+$impares = (string) null;
+
+//validação para saber se o botão foi clicado pelo usuario
+if(isset($_POST['btncalc'])){
+
+    // recebendo dados so HTML do formulário
+    $valorInicial = $_POST['sltNumeroInicial'];
+    $valorFinal = $_POST['sltNumeroFinal'];
+
+    $pares = numerosPares($valorInicial, $valorFinal);
+
+    $impares = numerosImpares($valorInicial, $valorFinal);
+
+
+
+}
+
 ?>
 <html>
     <head>
@@ -35,11 +56,12 @@ require_once('modulo/functions.php');
 						<input type="submit" name="btncalc" value="Calcular">
 
 						<div id="resultadoPar">
+                            <?=$pares?>
 						  
 						</div>
 						
 						<div id="resultadoImpar">
-						  
+						  <?=$impares?>
 						</div>
 						
 					</form>

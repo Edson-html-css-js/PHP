@@ -1,12 +1,12 @@
 <?php  
 
 /********************************************************************
- * objetivo: arquivo de funcoes para o projeto
+ * Objetivo: arquivo de funcoes para o projeto
  * data: 06/10/2021
  * autor: edson
 
 */
-//retorna os numeros para um list no HTML
+//Retorna os numeros para um list no HTML
 function gerarNumeros($numeroInial, $numeroFinal) {
 
     $cont = (int) 0;
@@ -25,7 +25,39 @@ function gerarNumeros($numeroInial, $numeroFinal) {
 
 }
 
+//Retorna uma sequencia de numeros pares
+function numerosPares ($numeroInial, $numeroFinal) {
 
+        $valorInicial = (int) $numeroInial;
+        $valorFinal = (int) $numeroFinal;
+        $resultadoPar = (string) null;
+
+        for($cont = $valorInicial; $cont <= $valorFinal; $cont++){
+            //verifica se o numero ($cont) é um numro par
+            if($cont%2 ==0)
+            // $resultadoPar = $resultadoPar . $cont . "<br>";
+
+        }
+        return $resultadoPar;
+}
+// trabalhando com vetores ou matrizes (array)
+// 
+
+
+//Retorna uma sequencia de numeros impares
+function numerosImpares ($numeroInial, $numeroFinal) {
+
+    $valorInicial = (int) $numeroInial;
+    $valorFinal = (int) $numeroFinal;
+    $resultadoimpar = (string) null;
+
+    for($cont = $valorInicial; $cont <= $valorFinal; $cont++){
+        //verifica se o numero ($cont) é um numro impar
+        if($cont%2 != 0)
+        $resultadoimpar = $resultadoimpar . $cont . "<br>";
+    }
+    return $resultadoimpar;
+}
 
 
 ?>
