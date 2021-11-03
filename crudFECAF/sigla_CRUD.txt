@@ -1,0 +1,8 @@
+CRUD
+Create
+Read
+Update
+Delete
+
+Create (insert)
+Read(select)
