@@ -1,5 +1,6 @@
 <?php
 
+require_once('../modulo/config.php');
 //inportando o arquivo de conexão com o BD 
 require_once('conexao.php');
 
@@ -19,6 +20,10 @@ if(isset($_POST['btnEnviar'])){
     $nickName = $_POST['txtNickName'];
     $senha = $_POST['txtSenha'];
     $email = $_POST['txtEmail'];
+    $dataAtual = date('Y/m/d');
+
+    // echo($dataAtual);
+    // die;//força a prada de execução do apache
 
 
     
@@ -27,17 +32,17 @@ if(isset($_POST['btnEnviar'])){
     $sql = "insert into tblusuario
     
         (nome, login, nickname, senha, email, dataCadastro)
-    values ('".$nome."', '".$login."', '".$nickName."', '".$senha."', '" .$email."', '2021-10-27')
+    values ('".$nome."', '".$login."', '".$nickName."', '".$senha."', '" .$email."', '".$dataAtual."')
     ";
 
     //abrindo conexão com o banco 
     $conexao = conexaoMysql();
 
     if(mysqli_query($conexao, $sql))
-        echo("Registro inserido com sucesso!");
+        echo(REGISTRO_SALVO);
 
      else
         
-        echo("Não foi possivel Salvar no BD!");
+        echo(ERRO_BD);
 }
 ?>

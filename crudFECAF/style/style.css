@@ -208,4 +208,19 @@ input[type=email]:hover{
     font-weight: bold;
 }
 
+#containermodal{
 
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+}
+#modal{
+
+    width: 500px;
+    height: 300px;
+    background-color: #ffffff;
+    margin: auto;
+    margin-top: 30vh;
+}
